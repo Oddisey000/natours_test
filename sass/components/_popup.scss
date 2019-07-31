@@ -8,7 +8,6 @@
     left: 0;
     background-color: rgba($color-black, .8);
     z-index: 80;
-    transition: all .3s;
 
     &__content {
         @include absoluteCenter;
@@ -76,6 +75,25 @@
 
         &:hover {
             color: $color-primary;
+        }
+    }
+
+    @include respond(tab-land) {
+        &__img {
+            display: none;
+        }
+
+        &__left {
+            display: none;
+        }
+    
+        &__right {
+            width: 100%;
+            padding: 3rem 5rem;
+        }
+
+        &__text {
+            column-count: 1;
         }
     }
 }
